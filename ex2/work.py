@@ -1,8 +1,15 @@
 from math import ceil
 
 def calc_account(m):
-    # 実装は入れていません、自分で入れてください
-    pass
+    # m距離,kin金額
+    if m <= 0:
+        return None
+    else:
+        kin = 610
+        while m > 1700:
+            kin = kin + 80
+            m = m - 315
+        return kin
 
 if __name__ == "__main__":
     from argparse import ArgumentParser
